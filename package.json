@@ -1,0 +1,33 @@
+{
+  "name": "pippy",
+  "version": "0.0.10",
+  "description": "Native Google Chrome extension for picture in picture mode. Supports Youtube, Twitch, Mixer, Facebook and many other platforms.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jasius/PiPPY.git"
+  },
+  "keywords": [
+    "Chrome",
+    "extension"
+  ],
+  "author": "Mindaugas Jasiulis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jasius/PiPPY/issues"
+  },
+  "homepage": "https://github.com/Jasius/PiPPY#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-copy": "^1.1.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglify-es": "^1.0.4",
+    "pump": "^3.0.0",
+    "replace": "^1.0.0"
+  }
+}
