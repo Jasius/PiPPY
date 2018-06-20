@@ -9,7 +9,6 @@
           "Unfortunately current API doesn't allow to exit picture in picture mode this way, hover over floating video and click 'x' button at the top right."
         );
       });
-      targetDiv.removeAttribute(attributeName);
     } else {
       await targetDiv.requestPictureInPicture().catch(error => {
         alert("Failed to enter picture in picture mode.");

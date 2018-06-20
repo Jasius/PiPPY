@@ -6,18 +6,22 @@ if (!document.pictureInPictureEnabled) {
   browserName.browserAction.onClicked.addListener(tab => {
     browserName.tabs.executeScript({ file: "pippy.js" });
   });
-}
-
-function getClickHandler() {
-  chrome.contextMenus.onClicked.addListener(function(info, tab) {
-    alert("working");
-    document.querySelector("video").requestPictureInPicture();
-  });
+  function initPippy() {
+    if (!document.pictureInPictureElement) {
+      chrome.contextMenus.onClicked.addListener(function() {
+        try {
+          eval(video.requestPictureInPicture());
+        } catch (error) {
+          alert("Failed to enter picture in picture mode.");
+        }
+      });
+    }
+  }
 }
 
 browserName.contextMenus.create({
   title: "Force picture in picture",
   type: "normal",
   contexts: ["video", "page"],
-  onclick: getClickHandler()
+  onclick: initPippy()
 });
