@@ -22,6 +22,11 @@ if (!document.pictureInPictureEnabled) {
 browserName.contextMenus.create({
   title: "Force picture in picture",
   type: "normal",
-  contexts: ["video", "page"],
-  onclick: initPippy()
+  contexts: ["video", "page"]
+});
+
+browserName.contextMenus.onClicked.addListener(function(info, tab) {
+  if (tab) {
+    browserName.tabs.executeScript(tab.id, { file: "pippy.js" });
+  }
 });
