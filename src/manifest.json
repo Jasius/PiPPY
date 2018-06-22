@@ -21,6 +21,15 @@
     },
     "default_title": "PiPPY"
   },
+  "commands": {
+    "shortcut_test": {
+      "suggested_key": {
+        "default": "Alt+Shift+S",
+        "windows": "Alt+Shift+S"
+      },
+      "description": "A test shortcut"
+    }
+  },
   "permissions": [
     "contextMenus",
     "activeTab",

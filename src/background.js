@@ -13,8 +13,11 @@ if (!document.pictureInPictureEnabled) {
           eval(video.requestPictureInPicture());
         } catch (error) {
           alert("Failed to enter picture in picture mode.");
-        }
-      });
+}
+
+browserName.commands.onCommand.addListener(function(command) {
+  browserName.tabs.executeScript({ file: "pippy.js" });
+});
     }
   }
 }
