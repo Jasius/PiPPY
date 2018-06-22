@@ -22,9 +22,9 @@ gulp.task("target:chrome", function() {
 
 gulp.task("package:chrome", function() {
   gulp
-    .src("build/*")
+    .src("build/**")
     .pipe(zip("chromePackage.zip"))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("./"));
 });
 
 gulp.task("build:chrome", ["copy", "compress:js", "target:chrome", "package:chrome"]);

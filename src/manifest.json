@@ -1,10 +1,11 @@
 {
   "name": "PiPPY - Native picture in picture",
   "short_name": "PiPPY",
-  "description": "Native Google Chrome extension for picture in picture mode. Supports Youtube, Twitch, Mixer, Facebook and many other platforms.",
+  "description":
+    "Native Google Chrome extension for picture in picture mode. Supports Youtube, Twitch, Mixer, Facebook and many other platforms.",
   "homepage_url": "http://pippy.jaska.co",
   "offline_enabled": true,
-  "version": "0.11",
+  "version": "0.12",
   "manifest_version": 2,
   "background": {
     "scripts": ["background.js"],
