@@ -1,3 +1,4 @@
+"use strict";
 if (!document.pictureInPictureEnabled) {
   browserName.browserAction.setTitle({
     title: "This feature isn't supported in this version of Chrome."

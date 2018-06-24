@@ -1,28 +1,29 @@
+"use strict";
 (async () => {
-  const targetDiv = document.querySelector("video");
+  const video = document.querySelector("video");
   const attributeName = "pippystatus";
-  if (targetDiv) {
-    targetDiv.addEventListener("leavepictureinpicture", function() {
-      targetDiv.removeAttribute(attributeName);
+  if (video) {
+    video.addEventListener("leavepictureinpicture", function() {
+      video.removeAttribute(attributeName);
     });
-    targetDiv.addEventListener("enterpictureinpicture", function() {
-      targetDiv.setAttribute(attributeName, "active");
+    video.addEventListener("enterpictureinpicture", function() {
+      video.setAttribute(attributeName, "active");
     });
-    if (targetDiv.hasAttribute(attributeName)) {
+    if (video.hasAttribute(attributeName)) {
       try {
         eval(await document.exitPictureInPicture());
       } catch (error) {
         alert("Failed to exit picture in picture mode.");
       }
     } else {
-      await targetDiv.requestPictureInPicture().catch(error => {
+      await video.requestPictureInPicture().catch(error => {
         alert("Failed to enter picture in picture mode.");
       });
     }
   } else {
     if (
       confirm(
-        "There's no video elements or it didn't load yet, if that's not the case please fill a bug report by clicking 'Ok' in the prompt."
+        "There's no video elements or video didn't load yet, if that's not the case please fill a bug report by clicking 'Ok' in the prompt."
       )
     ) {
       if (confirm("Are you sure you want to be redirected?")) {
