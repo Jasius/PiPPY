@@ -5,7 +5,7 @@
     "Native Google Chrome extension for picture in picture mode. Supports Youtube, Twitch, Mixer, Facebook and many other platforms.",
   "homepage_url": "http://pippy.jaska.co",
   "offline_enabled": true,
-  "version": "0.13",
+  "version": "0.14",
   "manifest_version": 2,
   "background": {
     "scripts": ["background.js"],
@@ -34,14 +34,17 @@
       "description": "Force picture in picture"
     }
   },
-  "web_accessible_resources": [
-    "assets/PiPPY-Twitch.png"
-  ],
+  "web_accessible_resources": ["assets/PiPPY-Twitch.png"],
   "content_scripts": [
     {
       "matches": ["*://*.twitch.tv/*"],
+      "exclude_matches": [
+        "*://*.twitch.tv/directory/*", "*://*.twitch.tv/"
+      ],
       "js": ["twitch/background.js"],
-      "css": ["twitch/style.css"]
+      "css": ["twitch/style.css"],
+      "all_frames": true,
+      "run_at": "document_end"
     }
   ],
   "permissions": [
