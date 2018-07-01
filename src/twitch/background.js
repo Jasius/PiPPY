@@ -1,4 +1,6 @@
 "use strict";
+const appendRetry = setInterval(appendTwitch, 700);
+
 function appendTwitch() {
   Element.prototype.insertChildAtIndex = function(pipBtn, index) {
     if (!index) index = 0;
@@ -8,7 +10,7 @@ function appendTwitch() {
       this.insertBefore(pipBtn, this.children[index]);
     }
   };
-  const parent = document.getElementsByClassName("player-buttons-right")[0];
+  let parent = document.getElementsByClassName("player-buttons-right")[0];
   const pipBtn = document.createElement("button");
   pipBtn.className = "player-button pippy";
   pipBtn.type = "button";
@@ -30,5 +32,6 @@ function appendTwitch() {
       }
     }
   };
+  clearInterval(appendRetry);
 }
 window.onload = appendTwitch;
