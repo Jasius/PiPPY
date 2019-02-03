@@ -1,16 +1,6 @@
-# This extension utilizes experimental web platform features which aren't enabled to everyone yet.
+# As of January 2019 Google released their own extension for same exact purpose so I recommend switching to it https://chrome.google.com/webstore/detail/picture-in-picture-extens/hkgfoiooedgoejojocmhlaklaeopbecg/
 
 Picture in picture mode can be forced with this extension even if website doesn't support it.
-
-## How to set up on Chrome
-
-- [Download extension](https://chrome.google.com/webstore/detail/pippy-native-picture-in-p/kienbfjdgnamgohflfagoplkpkkcnohj)
-- Enable three experimental web platform features
-1. chrome://flags/#enable-experimental-web-platform-features(put this link into url address bar and press enter)
-2. chrome://flags/#enable-surfaces-for-videos(put this link into url address bar and press enter) 
-3. chrome://flags/#enable-picture-in-picture(put this link into url address bar and press enter) 
-  
-After these steps extension should work as intended.
 
 ## Ways to use extension
 
